@@ -25,7 +25,7 @@ export default function ReportaModule() {
             Módulo Activo
           </div>
           <h2 className="text-4xl font-black text-slate-800 mb-4">
-            Conecta <span className="text-emerald-600">Reporta</span>
+            Salcajá <span className="text-emerald-600">Reporta</span>
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             Sistema de reportes ciudadanos vía WhatsApp con visualización pública

@@ -182,7 +182,7 @@ export default function Tutoriales() {
             Tutoriales <span className="text-blue-600">en video</span>
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Guías rápidas para que tus reportes sean atendidos de forma más rápida y efectiva por el municipio de Salcajá.
+            Guías rápidas para que tus reportes en Salcajá Reporta sean atendidos de forma más rápida y efectiva.
           </p>
         </div>
 

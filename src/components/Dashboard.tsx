@@ -43,7 +43,7 @@ export default function Dashboard() {
             Dashboard de <span className="text-blue-600">Transparencia</span>
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Seguimiento público y abierto del estado de los reportes ciudadanos en Salcajá.
+            Seguimiento público y abierto del estado de los reportes ciudadanos en Salcajá Reporta.
           </p>
         </div>
 

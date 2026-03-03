@@ -53,8 +53,8 @@ export default function Hero() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-5">
-            ¿Ves un problema
-            <span className="block text-emerald-400">en tu colonia?</span>
+            Salcajá
+            <span className="block text-emerald-400">Reporta</span>
           </h1>
 
           <p className="text-xl text-blue-100 leading-relaxed mb-3">

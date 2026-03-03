@@ -88,7 +88,7 @@ export default function HowItWorks() {
                       <MessageCircle size={16} className="text-white" />
                     </div>
                     <div>
-                      <div className="text-white font-bold text-sm">Municipalidad Salcajá</div>
+                      <div className="text-white font-bold text-sm">Salcajá Reporta</div>
                       <div className="text-emerald-200 text-xs">en línea</div>
                     </div>
                   </div>
