@@ -6,6 +6,7 @@ import HowItWorks from "./components/HowItWorks";
 import ReportaModule from "./components/ReportaModule";
 import Dashboard from "./components/Dashboard";
 import Tutoriales from "./components/Tutoriales";
+import Agradecimientos from "./components/Agradecimientos";
 import Footer from "./components/Footer";
 import ReportPage from "./pages/ReportPage";
 
@@ -28,6 +29,7 @@ export default function App() {
         <ReportaModule />
         <Dashboard />
         <Tutoriales />
+        <Agradecimientos />
       </main>
       <Footer />
     </div>
