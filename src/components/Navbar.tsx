@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { label: "Cómo reportar", href: "#como-reportar" },
   { label: "Reportes del municipio", href: "#reporta" },
   { label: "Estadísticas", href: "#dashboard" },
+  { label: "Tutoriales", href: "#tutoriales" },
 ];
 
 interface Props {

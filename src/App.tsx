@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
 import ReportaModule from "./components/ReportaModule";
 import Dashboard from "./components/Dashboard";
+import Tutoriales from "./components/Tutoriales";
 import Footer from "./components/Footer";
 import ReportPage from "./pages/ReportPage";
 
@@ -26,6 +27,7 @@ export default function App() {
         <HowItWorks />
         <ReportaModule />
         <Dashboard />
+        <Tutoriales />
       </main>
       <Footer />
     </div>
