@@ -1,80 +1,92 @@
-import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { MessageCircle, Twitter, Facebook, Instagram } from "lucide-react";
+import redLogo from "../assets/logos/RED.png";
+import muniLogo from "../assets/logos/MUNISAL.png";
 
 export default function Footer() {
-  const year = new Date().getFullYear();
-
   return (
-    <footer className="bg-blue-950 text-blue-300 border-t border-blue-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-black text-sm">SR</span>
-              </div>
-              <div>
-                <div className="text-white font-black text-lg leading-tight">
-                  Salcajá <span className="text-emerald-400">Reporta</span>
-                </div>
-                <div className="text-blue-400 text-xs">Plataforma de Reportes Ciudadanos</div>
-              </div>
+    <footer className="bg-black text-white">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="space-y-6">
+            <div className="flex items-center gap-2">
+              <img src={redLogo} alt="Red Ciudadana" className="h-14 w-auto object-contain" />
+              <img src={muniLogo} alt="Municipalidad de Salcajá" className="h-14 w-auto object-contain" />
             </div>
-            <p className="text-blue-400 text-sm leading-relaxed max-w-xs">
-              Proyecto de innovación pública municipal para fortalecer el diálogo
-              entre ciudadanía y gobierno local a través de tecnología accesible y transparente.
+            <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
+              Proyecto de innovación pública municipal para fortalecer el diálogo entre ciudadanía y gobierno local a través de
+              tecnología accesible y transparente.
             </p>
-            <div className="mt-5 flex items-center gap-3">
-              <a
-                href="https://wa.me/50246818166"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 bg-emerald-600 hover:bg-emerald-500 rounded-lg flex items-center justify-center transition-colors"
-                aria-label="WhatsApp"
-              >
-                <MessageCircle size={16} className="text-white" />
-              </a>
-              {["X", "FB", "IG"].map((social) => (
-                <div key={social} className="w-9 h-9 bg-blue-900 rounded-lg flex items-center justify-center text-xs font-bold text-blue-400">
-                  {social}
-                </div>
-              ))}
+
+            <div>
+              <p className="text-sm font-semibold mb-3">Síguenos</p>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://x.com/redciudadana"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X"
+                  className="w-10 h-10 rounded-md bg-slate-800/80 border border-slate-700 flex items-center justify-center text-white hover:text-blue-500 transition-colors"
+                >
+                  <Twitter size={16} />
+                </a>
+                <a
+                  href="https://facebook.com/redciudadana"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="w-10 h-10 rounded-md bg-slate-800/80 border border-slate-700 flex items-center justify-center text-white hover:text-blue-500 transition-colors"
+                >
+                  <Facebook size={16} />
+                </a>
+                <a
+                  href="https://instagram.com/redciudadana"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="w-10 h-10 rounded-md bg-slate-800/80 border border-slate-700 flex items-center justify-center text-white hover:text-blue-500 transition-colors"
+                >
+                  <Instagram size={16} />
+                </a>
+                <a
+                  href="https://wa.me/50246818166"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  className="w-10 h-10 rounded-md bg-slate-800/80 border border-slate-700 flex items-center justify-center text-white hover:text-blue-500 transition-colors"
+                >
+                  <MessageCircle size={16} />
+                </a>
+              </div>
+              <p className="text-xs text-slate-400 mt-4">
+                Mantente informado sobre las últimas actualizaciones
+              </p>
             </div>
           </div>
 
           <div>
-            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Plataforma</h4>
-            <ul className="space-y-2.5 text-sm">
+            <h4 className="text-sm font-bold mb-5">Enlaces Rápidos</h4>
+            <ul className="space-y-3 text-sm text-slate-300">
               {[
                 ["Salcajá Reporta", "#reporta"],
                 ["Dashboard", "#dashboard"],
-                ["Cómo funciona", "#como-funciona"],
+                ["Cómo funciona", "#como-reportar"],
                 ["Módulos futuros", "#plataforma"],
                 ["Tecnología", "#tecnologia"],
               ].map(([label, href]) => (
                 <li key={label}>
-                  <a href={href} className="hover:text-white transition-colors">{label}</a>
+                  <a href={href} className="hover:text-blue-500 transition-colors">{label}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Contacto</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2.5">
-                <MapPin size={14} className="mt-0.5 text-emerald-500 flex-shrink-0" />
-                <span>Municipalidad de Salcajá<br />Quetzaltenango, Guatemala</span>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Phone size={14} className="text-emerald-500 flex-shrink-0" />
-                <a href="tel:+50246818166" className="hover:text-white transition-colors">+502 4681 8166</a>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Mail size={14} className="text-emerald-500 flex-shrink-0" />
-                <a href="mailto:info@conectamunicipio.gt" className="hover:text-white transition-colors">
-                  info@conectamunicipio.gt
-                </a>
-              </li>
+            <h4 className="text-sm font-bold mb-5">Contacto</h4>
+            <ul className="space-y-3 text-sm text-slate-300">
+              <li>Municipalidad de Salcajá</li>
+              <li>Quetzaltenango, Guatemala</li>
+              <li>+502 4681 8166</li>
+              <li>info@conectamunicipio.gt</li>
             </ul>
 
             <div className="mt-6">
@@ -82,22 +94,13 @@ export default function Footer() {
                 href="https://wa.me/50246818166?text=Quiero%20reportar%20un%20problema%20en%20mi%20municipio"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-white text-sm font-bold px-4 py-2.5 rounded-lg transition-all"
+                className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-500 text-white text-sm font-semibold px-5 py-3 rounded-lg transition-all"
               >
-                <MessageCircle size={15} />
+                <MessageCircle size={16} />
                 Reportar ahora
               </a>
             </div>
           </div>
-        </div>
-
-        <div className="pt-8 border-t border-blue-900 flex flex-col items-center gap-3 text-xs text-center">
-          <p className="text-blue-700">
-            &copy; 2025 Red Ciudadana &mdash; Asociación Civil Red Ciudadana
-          </p>
-          <p className="text-blue-700">
-            Desarrollado con <span className="text-blue-500 font-medium">Conecta: Municipio</span> (software de código abierto) de Red Ciudadana
-          </p>
         </div>
       </div>
     </footer>

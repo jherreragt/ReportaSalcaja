@@ -20,12 +20,8 @@ export default function ReportaModule() {
     <section id="reporta" className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-            Módulo Activo
-          </div>
           <h2 className="text-4xl font-black text-slate-800 mb-4">
-            Salcajá <span className="text-emerald-600">Reporta</span>
+            Salcajá <span className="text-blue-500">Reporta</span>
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             Sistema de reportes ciudadanos vía WhatsApp con visualización pública
@@ -78,7 +74,7 @@ export default function ReportaModule() {
               <div className="relative" style={{ height: "420px" }}>
                 {loading ? (
                   <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-50">
-                    <Loader2 className="animate-spin text-emerald-500 mb-2" size={28} />
+                    <Loader2 className="animate-spin text-blue-500 mb-2" size={28} />
                     <span className="text-sm text-slate-500">Cargando reportes...</span>
                   </div>
                 ) : error ? (
@@ -114,7 +110,7 @@ export default function ReportaModule() {
                   <div className="space-y-3">
                     {[
                       { label: "Total reportes", value: stats.total, color: "bg-blue-800" },
-                      { label: "Resueltos", value: stats.resolved, color: "bg-emerald-500" },
+                      { label: "Resueltos", value: stats.resolved, color: "bg-blue-500" },
                       { label: "En proceso", value: stats.inProgress, color: "bg-blue-500" },
                       { label: "Pendientes", value: stats.pending, color: "bg-amber-400" },
                     ].map(({ label, value, color }) => (
@@ -130,11 +126,11 @@ export default function ReportaModule() {
                   <div className="mt-4 pt-4 border-t border-slate-100">
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-slate-500">Tasa de resolución</span>
-                      <span className="font-black text-emerald-600 text-lg">{stats.resolutionRate}%</span>
+                      <span className="font-black text-blue-500 text-lg">{stats.resolutionRate}%</span>
                     </div>
                     <div className="mt-2 h-2 bg-slate-100 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full transition-all"
+                        className="h-full bg-gradient-to-r from-blue-500 to-blue-500 rounded-full transition-all"
                         style={{ width: `${stats.resolutionRate}%` }}
                       />
                     </div>
@@ -170,7 +166,7 @@ export default function ReportaModule() {
               href={MUNICIPIO_CONFIG.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-4 rounded-xl transition-all hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5"
+              className="flex items-center justify-center gap-3 w-full bg-emerald-400 hover:bg-emerald-600 text-white font-bold py-4 rounded-xl transition-all hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5"
             >
               <MessageCircle size={20} />
               Reportar por WhatsApp

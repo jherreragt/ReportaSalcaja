@@ -5,8 +5,8 @@ import {
 } from "recharts";
 import { TrendingUp, CheckCircle2, Clock, FileText } from "lucide-react";
 
-const PIE_COLORS = ["#F59E0B", "#3B82F6", "#10B981", "#64748b", "#06b6d4"];
-const BAR_COLOR = "#3B82F6";
+const PIE_COLORS = ["#000", "#72ade8", "#77cebb"];
+const BAR_COLOR = "#72ade8";
 
 export default function Dashboard() {
   const { stats, loading } = useReports();
@@ -35,12 +35,11 @@ export default function Dashboard() {
     <section id="dashboard" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            <TrendingUp size={14} />
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-gray-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
             Datos en tiempo real
           </div>
           <h2 className="text-4xl font-black text-slate-800 mb-4">
-            Dashboard de <span className="text-blue-600">Transparencia</span>
+            Dashboard de <span className="text-blue-500">Transparencia</span>
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             Seguimiento público y abierto del estado de los reportes ciudadanos en Salcajá Reporta.
@@ -61,7 +60,7 @@ export default function Dashboard() {
               icon: CheckCircle2,
               label: "Tasa de resolución",
               value: `${stats.resolutionRate}%`,
-              color: "bg-emerald-500",
+              color: "bg-blue-500",
               textColor: "text-white",
               sub: `${stats.resolved} resueltos`,
             },
@@ -84,14 +83,14 @@ export default function Dashboard() {
           ].map(({ icon: Icon, label, value, color, textColor, sub }) => (
             <div
               key={label}
-              className={`${color} ${textColor} rounded-2xl p-5 flex flex-col gap-2`}
+              className={`bg-black text-white rounded-2xl p-5 flex flex-col gap-2`}
             >
-              <div className="flex items-center gap-2 opacity-80">
+              <div className="flex items-center gap-2 mt-2 opacity-80">
                 <Icon size={16} />
                 <span className="text-xs font-medium uppercase tracking-wide">{label}</span>
               </div>
-              <div className="text-3xl font-black">{value}</div>
-              <div className="text-xs opacity-70">{sub}</div>
+              <div className="text-3xl font-black py-6">{value}</div>
+              <div className="text-xs opacity-70 mb-2">{sub}</div>
             </div>
           ))}
         </div>

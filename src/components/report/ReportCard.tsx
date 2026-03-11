@@ -23,9 +23,13 @@ export default function ReportCard({ report, compact, onClick }: Props) {
     >
       <div className="flex gap-3">
         <div
-          className={`flex-shrink-0 w-9 h-9 rounded-xl flex items-center justify-center ${catConfig.bgColor}`}
+          className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center`}
         >
-          <Icon size={16} className={catConfig.color} />
+          {typeof Icon === "string" ? (
+            <img src={Icon} alt={report.category} className="w-full h-full object-contain border-0 rounded-none" />
+          ) : (
+            <Icon size={16} className={catConfig.color} />
+          )}
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1 flex-wrap">

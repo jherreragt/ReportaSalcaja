@@ -42,7 +42,11 @@ export default function CategoriesGrid({ onSelectCategory, activeCategory }: Pro
                   isActive ? `${cat.bgColor}` : "bg-slate-50 group-hover:bg-slate-100"
                 }`}
               >
-                <Icon size={20} className={cat.color} />
+                {typeof Icon === "string" ? (
+                  <img src={Icon} alt={cat.name} className="w-full h-full object-contain border-0 rounded-none" />
+                ) : (
+                  <Icon size={20} className={cat.color} />
+                )}
               </div>
               <h4 className="font-bold text-slate-800 text-sm mb-1">{cat.name}</h4>
               <p className="text-xs text-slate-500 leading-relaxed mb-3 line-clamp-2">

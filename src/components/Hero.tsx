@@ -42,27 +42,25 @@ export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
       <div ref={mapRef} className="absolute inset-0 z-0" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-br from-blue-950/92 via-blue-900/80 to-teal-900/70" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-blue-950 via-transparent to-transparent" />
 
       <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-32">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-medium mb-8">
-            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+          <div className="inline-flex items-center gap-2 bg-blue-500/15 border border-blue-500/30 text-white px-4 py-1.5 rounded-full text-sm font-medium mb-8">
+            <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
             Salcajá, Quetzaltenango
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-5">
             Salcajá
-            <span className="block text-emerald-400">Reporta</span>
+            <span className="block text-blue-500">Reporta</span>
           </h1>
 
-          <p className="text-xl text-blue-100 leading-relaxed mb-3">
+          <p className="text-xl text-white leading-relaxed mb-3">
             Repórtalo por WhatsApp.<br />
             <span className="text-white font-semibold">La municipalidad lo atiende.</span>
           </p>
 
-          <p className="text-blue-200 text-base mb-10">
+          <p className="text-white text-base mb-10">
             Sin apps. Sin formularios. Solo un mensaje y seguimiento público en tiempo real.
           </p>
 
@@ -71,7 +69,7 @@ export default function Hero() {
               href={MUNICIPIO_CONFIG.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-white font-black px-8 py-5 rounded-2xl text-lg transition-all hover:shadow-2xl hover:shadow-emerald-500/30 hover:-translate-y-1 active:translate-y-0"
+              className="inline-flex items-center justify-center gap-3 bg-blue-500 hover:bg-blue-500 text-white font-black px-8 py-5 rounded-2xl text-lg transition-all hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-1 active:translate-y-0"
             >
               <MessageCircle size={22} />
               Reportar por WhatsApp
@@ -90,8 +88,8 @@ export default function Hero() {
               "Sin descargar apps",
               "Seguimiento público",
             ].map((text) => (
-              <div key={text} className="flex items-center gap-2 text-blue-200">
-                <span className="text-emerald-400 font-bold">✓</span>
+              <div key={text} className="flex items-center gap-2 text-white">
+                <span className="text-emerald-500 font-bold">✓</span>
                 {text}
               </div>
             ))}

@@ -31,17 +31,36 @@ export default function ReportDetailPanel({ report, loading }: Props) {
   const catConfig = CATEGORY_CONFIG[report.category] ?? CATEGORY_CONFIG["Otro"];
   const Icon = catConfig.icon;
   const statusColor = STATUS_COLORS[report.status] ?? "#64748b";
+  const isPending = report.status == "Pendiente";
+  const isInProgress = report.status == "En proceso";
+  const panelBgClass = isPending
+    ? "bg-black border-black text-white"
+    : isInProgress
+      ? "bg-blue-100 border-blue-100 text-slate-900"
+      : "bg-emerald-100 border-emerald-100 text-slate-900";
+  const panelMutedText = isPending ? "text-white/70" : "text-slate-500";
+  const panelSubtleText = isPending ? "text-white/60" : "text-slate-400";
+  const panelStrongText = isPending ? "text-white" : "text-slate-800";
+  const panelCardBg = isPending
+    ? "bg-white/10"
+    : isInProgress
+      ? "bg-blue-50"
+      : "bg-emerald-50";
 
   return (
     <div className="space-y-5">
-      <div className={`rounded-2xl border p-6 ${catConfig.bgColor} ${catConfig.borderColor}`}>
+      <div className={`rounded-2xl border p-6 ${panelBgClass}`}>
         <div className="flex items-start gap-4">
           <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm flex-shrink-0">
-            <Icon size={22} className={catConfig.color} />
+            {typeof Icon === "string" ? (
+              <img src={Icon} alt={report.category} className="w-full h-full object-contain border-0 rounded-none" />
+            ) : (
+              <Icon size={22} className={isPending ? "text-blue-500" : catConfig.color} />
+            )}
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1 flex-wrap">
-              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
+              <span className={`text-xs font-semibold uppercase tracking-wide ${panelMutedText}`}>
                 {report.category}
               </span>
               <span
@@ -51,8 +70,8 @@ export default function ReportDetailPanel({ report, loading }: Props) {
                 {report.status}
               </span>
             </div>
-            <h2 className="text-lg font-bold text-slate-800 leading-snug">{report.description}</h2>
-            <p className="text-xs text-slate-400 mt-1">Reporte #{report.id}</p>
+            <h2 className={`text-lg font-bold leading-snug ${panelStrongText}`}>{report.description}</h2>
+            <p className={`text-xs mt-1 ${panelSubtleText}`}>Reporte #{report.id}</p>
           </div>
         </div>
 
@@ -63,24 +82,24 @@ export default function ReportDetailPanel({ report, loading }: Props) {
             { icon: Clock, label: "Tiempo de respuesta", value: report.responseTime ? `${report.responseTime} días` : "Pendiente" },
             { icon: Building2, label: "Dirección", value: catConfig.department },
           ].map(({ icon: FieldIcon, label, value }) => (
-            <div key={label} className="bg-white/70 rounded-xl p-3">
-              <div className="flex items-center gap-1.5 text-slate-400 text-xs mb-0.5">
+            <div key={label} className={`${panelCardBg} rounded-xl p-3`}>
+              <div className={`flex items-center gap-1.5 text-xs mb-0.5 ${panelSubtleText}`}>
                 <FieldIcon size={11} />
                 <span>{label}</span>
               </div>
-              <span className="text-sm font-semibold text-slate-800 leading-tight block">{value}</span>
+              <span className={`text-sm font-semibold leading-tight block ${panelStrongText}`}>{value}</span>
             </div>
           ))}
         </div>
 
-        <div className="mt-4 bg-white/70 rounded-xl p-3">
-          <div className="flex items-center gap-1.5 text-slate-400 text-xs mb-1">
+        <div className={`mt-4 ${panelCardBg} rounded-xl p-3`}>
+          <div className={`flex items-center gap-1.5 text-xs mb-1 ${panelSubtleText}`}>
             <Tag size={11} />
             <span>SLA estimado</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 size={14} className="text-emerald-500" />
-            <span className="text-sm font-semibold text-slate-800">{catConfig.sla}</span>
+            <CheckCircle2 size={14} className={isPending ? "text-white" : "text-blue-500"} />
+            <span className={`text-sm font-semibold ${panelStrongText}`}>{catConfig.sla}</span>
           </div>
         </div>
       </div>

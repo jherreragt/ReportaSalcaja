@@ -20,7 +20,7 @@ const VIDEOS: Video[] = [
     duration: "3:45",
     thumbnail: "https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg?auto=compress&cs=tinysrgb&w=800",
     tag: "Básico",
-    tagColor: "bg-emerald-500",
+    tagColor: "bg-blue-500",
     embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
@@ -30,7 +30,7 @@ const VIDEOS: Video[] = [
     duration: "2:30",
     thumbnail: "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800",
     tag: "Básico",
-    tagColor: "bg-emerald-500",
+    tagColor: "bg-blue-500",
     embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
@@ -40,7 +40,7 @@ const VIDEOS: Video[] = [
     duration: "2:00",
     thumbnail: "https://images.pexels.com/photos/697662/pexels-photo-697662.jpeg?auto=compress&cs=tinysrgb&w=800",
     tag: "Básico",
-    tagColor: "bg-emerald-500",
+    tagColor: "bg-blue-500",
     embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
@@ -146,7 +146,7 @@ function VideoCard({ video, onClick }: { video: Video; onClick: () => void }) {
           {video.duration}
         </div>
         <div className="absolute top-3 left-3">
-          <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full text-white ${video.tagColor}`}>
+          <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full text-white bg-blue-500`}>
             {video.tag}
           </span>
         </div>
@@ -158,7 +158,7 @@ function VideoCard({ video, onClick }: { video: Video; onClick: () => void }) {
         <p className="text-xs text-slate-500 mt-1.5 line-clamp-2 leading-relaxed">
           {video.description}
         </p>
-        <div className="flex items-center gap-1 mt-3 text-blue-600 text-xs font-semibold">
+        <div className="flex items-center gap-1 mt-3 text-blue-500 text-xs font-semibold">
           <span>Ver tutorial</span>
           <ChevronRight size={12} />
         </div>
@@ -174,12 +174,12 @@ export default function Tutoriales() {
     <section id="tutoriales" className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 bg-white text-gray-500 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
             <BookOpen size={14} />
             Aprende a reportar mejor
           </div>
           <h2 className="text-4xl font-black text-slate-800 mb-4">
-            Tutoriales <span className="text-blue-600">en video</span>
+            Tutoriales <span className="text-blue-500">en video</span>
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             Guías rápidas para que tus reportes en Salcajá Reporta sean atendidos de forma más rápida y efectiva.
@@ -210,16 +210,16 @@ export default function Tutoriales() {
               </ul>
             </div>
 
-            <div className="bg-blue-800 rounded-2xl p-6 text-white">
+            <div className="bg-black rounded-2xl p-6 text-white">
               <h3 className="font-bold text-lg mb-2">¿Listo para reportar?</h3>
-              <p className="text-blue-200 text-sm leading-relaxed mb-4">
+              <p className="text-white text-sm leading-relaxed mb-4">
                 Aplica lo aprendido y envía tu primer reporte ahora mismo vía WhatsApp.
               </p>
               <a
                 href="https://wa.me/50246818166?text=Quiero%20reportar%20un%20problema%20en%20mi%20municipio"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-5 py-3 rounded-xl transition-all text-sm"
+                className="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-500 text-white font-semibold px-5 py-3 rounded-xl transition-all text-sm"
               >
                 Reportar ahora
                 <ChevronRight size={14} />

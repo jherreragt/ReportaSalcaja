@@ -64,7 +64,7 @@ export default function ReportPage({ onBack, initialReportId }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-black text-slate-800 mb-2">
-            Salcajá <span className="text-blue-600">Reporta</span>
+            Salcajá <span className="text-blue-500">Reporta</span>
           </h1>
           <p className="text-slate-500 text-sm max-w-xl leading-relaxed">
             Consulta los reportes ciudadanos registrados, explora las categorías de atención y conoce
@@ -201,7 +201,7 @@ export default function ReportPage({ onBack, initialReportId }: Props) {
             <ReportProcessTimeline />
             <div className="mt-6 grid grid-cols-3 gap-4">
               {[
-                { label: "Tiempo mínimo", value: "1–2 días", color: "bg-emerald-50 text-emerald-700 border-emerald-200" },
+                { label: "Tiempo mínimo", value: "1–2 días", color: "bg-emerald-50 text-blue-500 border-emerald-200" },
                 { label: "Tiempo promedio", value: "3–5 días", color: "bg-blue-50 text-blue-700 border-blue-200" },
                 { label: "Tiempo máximo", value: "15 días", color: "bg-amber-50 text-amber-700 border-amber-200" },
               ].map(({ label, value, color }) => (

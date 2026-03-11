@@ -19,7 +19,7 @@ export const CATEGORIES = [
 ];
 
 export const STATUS_COLORS: Record<string, string> = {
-  Pendiente: "#F59E0B",
-  "En proceso": "#3B82F6",
-  Resuelto: "#10B981",
+  Pendiente: "#000000",
+  "En proceso": "#72ade8",
+  Resuelto: "#77cebb",
 };
