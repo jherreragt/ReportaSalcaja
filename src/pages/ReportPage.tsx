@@ -56,7 +56,7 @@ export default function ReportPage({ onBack, initialReportId }: Props) {
               <span className="hidden sm:inline">Inicio</span>
             </button>
             <div className="h-4 w-px bg-slate-200" />
-            <span className="font-bold text-slate-800 text-sm">Salcajá Reporta</span>
+            <span className="font-bold text-slate-800 text-sm">Reporta</span>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ export default function ReportPage({ onBack, initialReportId }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-black text-slate-800 mb-2">
-            Salcajá <span className="text-blue-500">Reporta</span>
+            Reporta: <span className="text-blue-500">Salcajá Quetzaltenango</span>
           </h1>
           <p className="text-slate-500 text-sm max-w-xl leading-relaxed">
             Consulta los reportes ciudadanos registrados, explora las categorías de atención y conoce

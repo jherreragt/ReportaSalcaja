@@ -27,7 +27,7 @@ export default function Agradecimientos() {
           "Habilitando la transformación digital y mejorando la prestación de servicios públicos a gran escala en Guatemala"
         </p>
 
-        <div className="flex flex-wrap justify-center gap-3 mt-6">
+        {/* <div className="flex flex-wrap justify-center gap-3 mt-6">
           <span className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-xs font-semibold px-4 py-2 rounded-full">
             Financiado por la Unión Europea
           </span>
@@ -37,7 +37,7 @@ export default function Agradecimientos() {
           <span className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-700 text-xs font-semibold px-4 py-2 rounded-full">
             Implementado por PNUD
           </span>
-        </div>
+        </div> */}
       </div>
     </section>
   );
