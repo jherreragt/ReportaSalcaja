@@ -28,7 +28,7 @@ export default function Navbar({ onNavigateReports }: Props) {
   return (
     <nav
       className={`transition-all duration-300 ${
-        scrolled ? "bg-blue-950/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
+        scrolled ? "bg-black backdrop-blur-sm shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +68,7 @@ export default function Navbar({ onNavigateReports }: Props) {
               href="https://wa.me/50246818166?text=Quiero%20reportar%20un%20problema%20en%20mi%20municipio"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-500 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:shadow-blue-500/25 hover:shadow-lg"
+              className="bg-blue-500 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:bg-white hover:text-gray-900 hover:shadow-lg"
             >
               Reportar ahora
             </a>

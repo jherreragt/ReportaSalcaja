@@ -1,47 +1,11 @@
-import { useEffect, useRef } from "react";
 import { MessageCircle, ChevronDown } from "lucide-react";
 import { MUNICIPIO_CONFIG } from "../config/municipio";
+import sliderBg from '../assets/slider/SLIDER-01.png';
 
 export default function Hero() {
-  const mapRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!mapRef.current) return;
-    let map: any;
-    const initMap = async () => {
-      const L = await import("leaflet");
-      await import("leaflet/dist/leaflet.css");
-      if (!mapRef.current || mapRef.current.dataset.initialized) return;
-      mapRef.current.dataset.initialized = "true";
-      map = L.map(mapRef.current, {
-        center: MUNICIPIO_CONFIG.coordinates,
-        zoom: MUNICIPIO_CONFIG.zoom,
-        zoomControl: false,
-        scrollWheelZoom: false,
-        dragging: false,
-        attributionControl: false,
-      });
-      L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-        maxZoom: 19,
-      }).addTo(map);
-      const pulseIcon = L.divIcon({
-        className: "",
-        html: `<div style="position:relative;width:24px;height:24px;display:flex;align-items:center;justify-content:center">
-          <div style="position:absolute;width:24px;height:24px;background:#10b981;border-radius:50%;opacity:0.3;animation:ping 1.5s cubic-bezier(0,0,0.2,1) infinite"></div>
-          <div style="width:12px;height:12px;background:#10b981;border-radius:50%;border:2px solid white"></div>
-        </div>`,
-        iconSize: [24, 24],
-        iconAnchor: [12, 12],
-      });
-      L.marker(MUNICIPIO_CONFIG.coordinates, { icon: pulseIcon }).addTo(map);
-    };
-    initMap();
-    return () => { if (map) map.remove(); };
-  }, []);
-
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
-      <div ref={mapRef} className="absolute inset-0 z-0" />
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden" style={{ backgroundImage: `url(${sliderBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="absolute inset-0 z-0 bg-black/45" />
 
       <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-32">
         <div className="max-w-2xl">
@@ -69,14 +33,14 @@ export default function Hero() {
               href={MUNICIPIO_CONFIG.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-blue-500 hover:bg-blue-500 text-white font-black px-8 py-5 rounded-2xl text-lg transition-all hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-1 active:translate-y-0"
+              className="inline-flex items-center justify-center gap-3 bg-blue-500 hover:bg-black text-white font-black px-8 py-5 rounded-2xl text-lg transition-all hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-1 active:translate-y-0"
             >
               <MessageCircle size={22} />
               Reportar por WhatsApp
             </a>
             <a
               href="#reporta"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold px-6 py-4 rounded-2xl text-base transition-all backdrop-blur-sm"
+              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white hover:text-gray-900 border border-white/20 text-white font-semibold px-6 py-4 rounded-2xl text-base transition-all backdrop-blur-sm"
             >
               Ver reportes del municipio
             </a>

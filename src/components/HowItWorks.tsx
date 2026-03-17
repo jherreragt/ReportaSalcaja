@@ -95,7 +95,7 @@ export default function HowItWorks() {
             href={MUNICIPIO_CONFIG.whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-black text-white font-black px-8 py-4 rounded-2xl text-base transition-all hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0"
+            className="inline-flex items-center gap-3 bg-black text-white font-black px-8 py-4 rounded-2xl text-base transition-all hover:shadow-xl hover:-translate-y-0.5 hover:bg-white hover:text-gray-900 active:translate-y-0"
           >
             <MessageCircle size={20} />
             Abrir WhatsApp ahora

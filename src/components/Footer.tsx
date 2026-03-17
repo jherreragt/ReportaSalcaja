@@ -94,7 +94,7 @@ export default function Footer() {
                 href="https://wa.me/50246818166?text=Quiero%20reportar%20un%20problema%20en%20mi%20municipio"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-500 text-white text-sm font-semibold px-5 py-3 rounded-lg transition-all"
+                className="inline-flex items-center gap-2 bg-blue-500 hover:bg-white hover:text-gray-900 text-white text-sm font-semibold px-5 py-3 rounded-lg transition-all"
               >
                 <MessageCircle size={16} />
                 Reportar ahora
