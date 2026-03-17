@@ -1,5 +1,11 @@
 import { useState } from "react";
 import { Play, BookOpen, CheckCircle2, ChevronRight } from "lucide-react";
+import comoHacerReporteExitoso from "../assets/tutoriales/como-hacer-reporte-exitoso2.png";
+import comoTomarFotos from "../assets/tutoriales/como-tomar-fotos2.png";
+import comoCompartirUbicacion from "../assets/tutoriales/como-compartir-ubicacion2.png";
+import seguimientoDeTuReporte from "../assets/tutoriales/seguimiento-de-tu-reporte2.png";
+import cualCategoriaElegir from "../assets/tutoriales/cual-categoria-elegir2.png";
+import quePasaDespues from "../assets/tutoriales/que-pasa-despues2.png";
 
 interface Video {
   id: string;
@@ -18,7 +24,7 @@ const VIDEOS: Video[] = [
     title: "¿Cómo hacer un reporte exitoso?",
     description: "Aprende los pasos clave para enviar un reporte claro y completo que tenga más probabilidades de ser atendido rápidamente.",
     duration: "3:45",
-    thumbnail: "https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg?auto=compress&cs=tinysrgb&w=800",
+    thumbnail: comoHacerReporteExitoso,
     tag: "Básico",
     tagColor: "bg-blue-500",
     embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -28,7 +34,7 @@ const VIDEOS: Video[] = [
     title: "Cómo tomar fotos para tu reporte",
     description: "Una buena foto acelera la atención. En este tutorial te enseñamos ángulos, iluminación y qué incluir en la imagen.",
     duration: "2:30",
-    thumbnail: "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800",
+    thumbnail: comoTomarFotos,
     tag: "Básico",
     tagColor: "bg-blue-500",
     embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -38,7 +44,7 @@ const VIDEOS: Video[] = [
     title: "Cómo compartir tu ubicación exacta",
     description: "La ubicación precisa es fundamental. Mira cómo enviar coordenadas o un pin desde WhatsApp para que el municipio llegue al lugar correcto.",
     duration: "2:00",
-    thumbnail: "https://images.pexels.com/photos/697662/pexels-photo-697662.jpeg?auto=compress&cs=tinysrgb&w=800",
+    thumbnail: comoCompartirUbicacion,
     tag: "Básico",
     tagColor: "bg-blue-500",
     embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -48,7 +54,7 @@ const VIDEOS: Video[] = [
     title: "Seguimiento de tu reporte en el mapa",
     description: "Una vez enviado tu reporte, descubre cómo encontrarlo en el mapa público y entender cada estado del proceso.",
     duration: "4:10",
-    thumbnail: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800",
+    thumbnail: seguimientoDeTuReporte,
     tag: "Seguimiento",
     tagColor: "bg-blue-500",
     embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -58,7 +64,7 @@ const VIDEOS: Video[] = [
     title: "Categorías de reporte: ¿cuál elegir?",
     description: "Conoce cada categoría disponible (calles, agua, alumbrado, etc.) y cómo elegir la correcta para que tu caso llegue al área municipal adecuada.",
     duration: "3:00",
-    thumbnail: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=800",
+    thumbnail: cualCategoriaElegir,
     tag: "Avanzado",
     tagColor: "bg-amber-500",
     embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -68,7 +74,7 @@ const VIDEOS: Video[] = [
     title: "¿Qué pasa después de reportar?",
     description: "Entiende el proceso interno: validación, asignación, atención en campo y cierre. Transparencia total del ciclo de un reporte ciudadano.",
     duration: "5:20",
-    thumbnail: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800",
+    thumbnail: quePasaDespues,
     tag: "Proceso",
     tagColor: "bg-teal-500",
     embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -136,7 +142,6 @@ function VideoCard({ video, onClick }: { video: Video; onClick: () => void }) {
           alt={video.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-blue-950/30 group-hover:bg-blue-950/20 transition-colors" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
             <Play size={18} className="text-blue-800 ml-1" fill="currentColor" />

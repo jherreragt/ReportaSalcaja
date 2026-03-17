@@ -24,7 +24,7 @@ export default function Agradecimientos() {
           Esta iniciativa se desarrolla en el marco del programa conjunto:
         </p>
         <p className="text-slate-900 font-bold text-lg leading-snug max-w-3xl mx-auto">
-          "Habilitando la transformación digital y mejorando la prestación de servicios públicos a gran escala en Guatemala"
+          “Habilitando la transformación digital y mejorando la prestación de servicios públicos a gran escala en Guatemala”, financiado por  la Unión Europea y el Joint SDG Fund,  implementado por el Programa de Naciones Unidas para el Desarrollo (PNUD).
         </p>
 
         {/* <div className="flex flex-wrap justify-center gap-3 mt-6">
